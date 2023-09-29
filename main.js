@@ -156,6 +156,27 @@ for (var i = 0; i < p_search.length; i++) {
   console.log("########################################################################");
 }
 
+//############################## function to add product to array ######################################################################################
+
+function addProduct(p_name, p_title,p_price,p_description, p_image) {
+  // Create a new product object
+  const newProduct = {
+    name: p_name,
+    title: p_title,
+    price: p_price,
+    description: p_description,
+    image:p_image
+  };
+
+  // Add the new product to the array
+  myProducts.push(newProduct);
+}
+
+// example
+addProduct("product4", "title4",3500,"description 4", "image4.jpg");
+console.log(`##############Array after add ###############`);
+console.log(myProducts);
+
 // Search for objects with a partial name match
 /*var searchResult = searchByName("myProduct", myProducts);
 console.log(` Result Search ::: ${searchResult} ` );
